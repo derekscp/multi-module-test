@@ -39,7 +39,7 @@
                                     <version>${project.version}</version>
                                 </deployProperties>
                                 <publisher>
-                                    <contextUrl>https://localhost:8081/artifactory</contextUrl>
+                                    <contextUrl>http://localhost:8081/artifactory</contextUrl>
                                     <repoKey>${artifactory-repository.name}</repoKey>
                                     <snapshotRepoKey>libs-snapshot</snapshotRepoKey>
                                     <username>{{ARTIFACTORY_USERNAME}}</username>

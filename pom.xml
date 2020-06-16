@@ -15,7 +15,7 @@
 
     <properties>
         <artifactory-maven.plugin.version>2.7.0</artifactory-maven.plugin.version>
-        <artifactory-repository.name>libs-release</artifactory-repository.name>
+        <artifactory-repository.name>ramsey-local</artifactory-repository.name>
     </properties>
 
     <build>

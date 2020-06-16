@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>multi-modal-artifactory</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>svc</module>
+        <module>sdk</module>
+    </modules>
+
+    <properties>
+        <artifactory-maven.plugin.version>2.7.0</artifactory-maven.plugin.version>
+        <artifactory-repository.name>libs-release</artifactory-repository.name>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jfrog.buildinfo</groupId>
+                    <artifactId>artifactory-maven-plugin</artifactId>
+                    <version>${artifactory-maven.plugin.version}</version>
+                    <inherited>true</inherited>
+                    <executions>
+                        <execution>
+                            <id>build-info</id>
+                            <goals>
+                                <goal>publish</goal>
+                            </goals>
+                            <configuration>
+                                <deployProperties>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                </deployProperties>
+                                <publisher>
+                                    <contextUrl>https://ramseysolutions.jfrog.io/artifactory</contextUrl>
+                                    <repoKey>${artifactory-repository.name}</repoKey>
+                                    <snapshotRepoKey>libs-snapshot</snapshotRepoKey>
+                                    <username>{{ARTIFACTORY_USERNAME}}</username>
+                                    <password>{{ARTIFACTORY_TOKEN}}</password>
+                                </publisher>
+                                <buildInfo>
+                                    <buildName>${project.artifactId}</buildName>
+                                    <buildNumber>TEST</buildNumber>
+                                </buildInfo>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.jfrog.buildinfo</groupId>
+                <artifactId>artifactory-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

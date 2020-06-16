@@ -42,8 +42,8 @@
                                     <contextUrl>http://localhost:8081/artifactory</contextUrl>
                                     <repoKey>${artifactory-repository.name}</repoKey>
                                     <snapshotRepoKey>libs-snapshot</snapshotRepoKey>
-                                    <username>{{ARTIFACTORY_USERNAME}}</username>
-                                    <password>{{ARTIFACTORY_TOKEN}}</password>
+                                    <username>admin</username>
+                                    <password>password123</password>
                                 </publisher>
                                 <buildInfo>
                                     <buildName>${project.artifactId}</buildName>

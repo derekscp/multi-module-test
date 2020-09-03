@@ -17,6 +17,12 @@
         <artifactory-maven.plugin.version>2.7.0</artifactory-maven.plugin.version>
         <artifactory-repository.name>libs-release</artifactory-repository.name>
     </properties>
+         
+    <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>artifactory</artifactId>
+            <version>3.8.1</version>
+    </dependency>
 
     <build>
         <pluginManagement>

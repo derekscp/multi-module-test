@@ -25,9 +25,9 @@
                 <version>3.8.0</version>
         </dependency>
         <dependency>
-                <groupId>org.jenkins-ci.plugins</groupId>
-                <artifactId>artifactory</artifactId>
-                <version>3.8.0</version>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.4</version>
         </dependency>         
     </dependencies>
 

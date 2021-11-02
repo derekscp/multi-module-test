@@ -18,18 +18,7 @@
         <artifactory-repository.name>libs-release</artifactory-repository.name>
     </properties>
          
-    <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-    <groupId>log4j</groupId>
-    <artifactId>log4j</artifactId>
-    <version>1.2.17</version>
-</dependency>
+
     
     <dependencies>     
         <dependency>
@@ -41,8 +30,14 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.4</version>
-        </dependency>         
+        </dependency>   
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
+         
 
     <build>
         <pluginManagement>
